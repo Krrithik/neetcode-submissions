@@ -5,7 +5,7 @@ class MinStack:
 
     def push(self, val: int) -> None:
         if not self.stack:
-            self.stack.append((val,val))
+            self.stack.append((val,val))     # adding to the stack as a tuple, where (val, minimum val so far)
         else:
             prevMin = self.stack[-1][1]
             self.stack.append((val, min(val, prevMin)))
